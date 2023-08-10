@@ -1,0 +1,33 @@
+
+<mat-grid-list cols="1" rowHeight="2:1" style="	display: block; position: inherit;">
+    <mat-grid-tile>
+      <mat-card>
+        <mat-card-header>
+        <img mat-card-sm-image alt="centered image" style="width: auto !important; height: auto !important;  " src="./assets/images/crm.jpg"></mat-card-header>
+  
+        <mat-card-content>
+          <form class="example-form" [formGroup]="form" autocomplete="off" novalidate (ngSubmit)="login()" fxLayout="column wrap"
+          fxLayoutAlign="center center" fxLayoutGap="10px">
+          <mat-form-field class="example-full-width">
+          <mat-label>Usuario</mat-label>
+          <input  matInput  [(ngModel)]="email" formControlName="user" placeholder="Usuario">
+        </mat-form-field>
+        <mat-form-field  class="example-full-width">
+          <mat-label>Clave</mat-label>
+          <input type="password" matInput  [(ngModel)]="password" formControlName="pwd" placeholder="Password">
+        </mat-form-field>
+        <br>
+       <br>
+        <button mat-raised-button color="accent" >Iniciar Sesión</button>
+      </form>
+      <br>
+      <button mat-raised-button color="primary" routerLink="/registrar" >Registrarse</button>
+      <br>
+      <button mat-raised-button color="primary" routerLink="/recuperar" >Recuperar clave</button>
+      </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  
+  
+  </mat-grid-list>
+  

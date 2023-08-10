@@ -1,0 +1,28 @@
+     
+  <mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav #sidenav mode="push" style="width:15% ;" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">
+                 
+                 <button mat-fab extended routerLink="/menu/mensajes" color="primary">
+                  <mat-icon>question_answer</mat-icon>
+                 Mensajes
+                </button>
+            
+                </mat-sidenav> 
+    <mat-sidenav-content>
+   
+  <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon"  (click)="sidenav.toggle()"> <mat-icon>menu</mat-icon></button>
+        <span>STAR CRM</span>
+        <span class="example-spacer"></span>
+        
+        <button mat-icon-button class="example-icon"  (click)="cerrarSession()"> <mat-icon>exit_to_app</mat-icon></button>
+  
+    </mat-toolbar>
+    <div >
+      <router-outlet ></router-outlet>
+    </div>
+  
+    
+    </mat-sidenav-content>
+  </mat-sidenav-container>
